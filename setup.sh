@@ -31,6 +31,6 @@ echo
 echo "Next steps:"
 echo "  1. Edit workbench/docstyle.sty with your personal info"
 echo "  2. Edit workbench/resume.tex with your experience"
-echo "  3. Compile with: cd workbench && xelatex -jobname=MyResume -output-directory=../output resume.tex"
+echo "  3. Compile with: ./build.sh MyResume"
 echo
 echo "Your PDF will be at: output/MyResume.pdf"

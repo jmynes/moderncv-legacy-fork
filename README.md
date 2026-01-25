@@ -89,13 +89,12 @@ Edit `workbench/resume.tex` to add your:
 ### 4. Compile your resume
 
 ```bash
-cd workbench
-xelatex -jobname=MyResume -output-directory=../output resume.tex
+./build.sh MyResume
 ```
 
 Your compiled resume will be at `output/MyResume.pdf`.
 
-Change `-jobname=MyResume` to set a different output filename.
+The build script sets `TEXINPUTS` to use the local moderncv fork, avoiding conflicts with the system-installed moderncv package (which uses fontawesome5 instead of fontawesome v4).
 
 ## Project Structure
 
@@ -103,6 +102,7 @@ Change `-jobname=MyResume` to set a different output filename.
 ├── README.md
 ├── .gitignore
 ├── setup.sh                # Setup script (run this first)
+├── build.sh                # Build script (compiles workbench/resume.tex)
 ├── moderncv/               # moderncv fork (LaTeX document class)
 ├── sample/                 # Sample template with fictional data
 │   ├── sample-resume.tex   # Sample resume content
