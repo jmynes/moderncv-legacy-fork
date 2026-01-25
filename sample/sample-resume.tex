@@ -1,0 +1,159 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SAMPLE RESUME - This contains fictional sample data for demonstration
+%% Copy this file to ../workbench/resume.tex and edit with your own information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,letter,sans]{moderncv/moderncv}
+\usepackage{sample-docstyle}
+
+% USING XeLaTeX
+
+%% Multicolumn
+\usepackage{multicol}
+\setlength{\columnsep}{-4cm}
+
+%% Font awesome
+\usepackage{fontawesome}
+
+\geometry{
+  %showframe,
+  tmargin=0.55in,
+  bmargin=0.45in,
+}
+
+% alias for super scripts
+\newcommand{\tss}{\textsuperscript}
+
+% float links to bottom of page
+\newenvironment{floatbottom}{\par\vspace*{\fill}}{\clearpage}
+
+% make the title font a bit smaller
+\renewcommand*{\titlefont}{\Large\mdseries\slshape}
+
+%%%
+
+\begin{document}
+\maketitle
+
+\vspace*{-14mm}
+
+%%
+
+\section{Education}
+
+\cventry
+  {2018 - 2022\break\break Fall 2021\break Summer 2020}
+  {B.S. Computer Science}
+  {State University}
+  {San Francisco, CA}{}{%
+    \begin{itemize}
+	\item \textbf{Extracurriculars:} President of Computer Science Club, Hackathon Organizer, ACM Member
+	\item \textbf{TA \& Course Content Creation:} TA for CS201 Data Structures, wrote lab materials
+      \item \textbf{Study abroad:} Completed exchange program in Berlin, Germany
+    \end{itemize}
+  }
+
+\cventry
+  {}
+  {Relevant Course Material}
+  {}
+  {Highlights, projects, and skills learned or utilized}{}{%
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item Data Structures \& Algorithms
+      \item Operating Systems
+      \item Database Systems
+      \item Computer Networks
+      \item Software Engineering
+    \end{itemize}
+    \columnbreak
+    \begin{itemize}
+      \item[] Built full-stack web application with React and Node.js
+      \item[] Implemented distributed systems project using Go
+      \item[] Designed and optimized SQL database schemas
+      \item[] Deployed applications using Docker and Kubernetes
+      \item[] Contributed to open source projects on GitHub
+    \end{itemize}
+  \end{multicols}
+}
+
+%%
+
+\section{Work Experience}
+
+\cventry
+  {2022 Full-time June--Current}
+  {Software Engineer}
+  {Tech Solutions Inc.}
+  {San Francisco, CA}{}{%
+  \begin{itemize}
+    \item Developed and maintained microservices handling millions of daily requests
+    \item Implemented CI/CD pipelines reducing deployment time by 40\%
+    \item Collaborated with cross-functional teams to deliver features on schedule
+    \item Mentored junior developers and conducted code reviews
+  \end{itemize}
+}
+
+\cventry
+  {2021 Full-time June--August}
+  {Software Engineering Intern}
+  {Startup Labs}
+  {San Francisco, CA}{}{%
+  \begin{itemize}
+    \item Built RESTful APIs using Python and Flask for mobile application backend
+    \item Wrote unit and integration tests achieving 85\% code coverage
+    \item Participated in agile ceremonies including daily standups and sprint planning
+    \item Documented technical specifications and API endpoints
+  \end{itemize}
+}
+
+\cventry
+  {2019--2020 Part-time Year-round}
+  {IT Support Technician}
+  {Campus Tech Services}
+  {San Francisco, CA}{}{%
+  \begin{itemize}
+    \item Provided technical support to students and faculty for hardware and software issues
+    \item Maintained and troubleshot campus network infrastructure
+  \end{itemize}
+}
+
+%%
+
+\section{Personal Projects}
+\cventry
+  {2023\break Side Project}
+  {Open Source Contribution - CLI Tool}{}{}{}{%
+  \begin{itemize}
+    \item Developed command-line tool for automating development workflows
+    \item Published package with 500+ downloads on package registry
+    \item \textbf{Technologies}: Python, Click, GitHub Actions
+  \end{itemize}
+}
+
+\cventry
+  {2020-2022}
+  {Personal Website \& Blog}{}{}{}{%
+  \begin{itemize}
+    \item Built personal portfolio website with blog functionality
+    \item Implemented responsive design and accessibility features
+    \item \textbf{Technologies}: React, Next.js, Tailwind CSS, Vercel
+  \end{itemize}
+}
+
+%%
+
+\section{Skills}
+\cvline{Proficient}{Python, JavaScript, TypeScript, Git, Linux, Docker, SQL}
+\cvline{Intermediate}{Go, Rust, Kubernetes, AWS, React, Node.js, PostgreSQL}
+
+%%
+
+\begin{floatbottom}
+  \small
+    \begin{center}
+      {\faLinkedin} {\url{linkedin.com/in/alexjohnson}} \quad \quad {\faGlobe} {\url{alexjohnson.dev}} \quad \quad {\faGithub} {\url{github.com/alexjohnson}}
+     \end{center}
+\end{floatbottom}
+
+\end{document}

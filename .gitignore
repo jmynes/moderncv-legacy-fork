@@ -1,0 +1,11 @@
+# LaTeX artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+
+# Workbench (user's personal files)
+workbench/
+
+# Output directory (user's compiled PDFs)
+output/

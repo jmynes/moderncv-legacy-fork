@@ -1,0 +1,48 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SAMPLE DOCSTYLE - This contains fictional sample data for demonstration
+%% Copy this file to ../workbench/docstyle.sty and edit with your own information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Based on moderncv by Xavier Danaux (xdanaux@gmail.com)
+%% and Mark Liu (markwayneliu@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+% USING XeLaTeX
+
+\usepackage{verbatim}
+
+%% Font awesome
+\usepackage{fontawesome}
+
+% nicer monospace font
+\usepackage{inconsolata}
+
+% moderncv themes
+% optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[blue]{classic}
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+\usepackage[letterpaper, scale=0.84]{geometry}
+
+% if you want to change the width of the column with the dates
+%\setlength{\hintscolumnwidth}{3cm}
+
+% required when changes are made to page layout lengths
+\AtBeginDocument{\recomputelengths}
+
+% personal data
+\title{\normalfont{}Software Engineering}
+\firstname{Alex}
+\familyname{Johnson}
+\address{\faMapMarker \hspace {2mm}San Francisco, CA 94102}
+\extrainfo{\faMobile \hspace {2mm}(555) 123-4567}
+\email{alex.johnson@example.com}
+
+% make quotes nicer
+\newcommand{\q}[1]{``#1''}
