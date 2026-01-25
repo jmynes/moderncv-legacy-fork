@@ -161,7 +161,7 @@
 % package providing hooks into lists
 %   originally developped by Jakob Schiøtz (see http://dcwww.camd.dtu.dk/~schiotz/comp/LatexTips/tweaklist.sty)
 %   modified and distributed with moderncv(not available otherwise on ctan)
-\RequirePackage{moderncv/tweaklist}
+\input{moderncv/tweaklist.sty}
 \renewcommand*{\itemhook}{%
   \@minipagetrue% removes spacing before lists as they use \addvspace, which doesn't add vertical space inside minipages
   \@noparlisttrue% removes spacing at end of lists, caused by \par
@@ -184,10 +184,10 @@
 \RequirePackage{microtype}
 
 % stack of key-value elements, used to save personal information
-\RequirePackage{moderncv/moderncvcollection}
+\input{moderncv/moderncvcollection.sty}
 
 % compatibility package with older versions of moderncv
-\RequirePackageWithOptions{moderncv/moderncvcompatibility}
+\input{moderncv/moderncvcompatibility.sty}
 
 
 %-------------------------------------------------------------------------------
@@ -313,17 +313,18 @@
 % loads a style variant
 % usage: \moderncvstyle{<style variant name>}
 \newcommand*{\moderncvstyle}[1]{
-  \RequirePackage{moderncv/moderncvstyle#1}}
+  \input{moderncv/moderncvstyle#1.sty}}
   
 % loads a color scheme
 % usage: \moderncvcolor{<color scheme name>}
 \newcommand*{\moderncvcolor}[1]{
-  \RequirePackage{moderncv/moderncvcolor#1}}
+  \input{moderncv/moderncvcolor#1.sty}}
 
 % loads an icons set
 % usage: \moderncvicons{<icon set name>}
+% Using \input to force local path (avoids conflict with system moderncv)
 \newcommand*{\moderncvicons}[1]{
-  \RequirePackage{moderncv/moderncvicons#1}}
+  \input{moderncv/moderncvicons#1.sty}}
 
 % recomputes all automatic lengths
 \newcommand*{\recomputelengths}{\recomputecvlengths}
