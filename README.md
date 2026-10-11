@@ -37,7 +37,7 @@ The modern [moderncv](https://github.com/moderncv/moderncv) project still offers
 
 [Download PDF](sample/sample-resume.pdf)
 
-## Quick Setup (Debian/Ubuntu)
+## Quick Setup (Debian/Ubuntu or Fedora)
 
 Run the setup script to install dependencies and prepare your workbench:
 
@@ -46,9 +46,10 @@ Run the setup script to install dependencies and prepare your workbench:
 ```
 
 This will:
-- Install TeX Live packages
+- Install TeX Live packages (via `apt` or `dnf`)
+- On Fedora, register the FontAwesome font with fontconfig (see below)
 - Create `workbench/` and `output/` directories
-- Copy sample files to your workbench
+- Copy sample files to your workbench (skipped if `workbench/` already has resume files)
 
 ## Manual Setup
 
@@ -56,8 +57,22 @@ If you prefer to set up manually:
 
 ### 1. Install dependencies
 
+Debian/Ubuntu:
 ```bash
 sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-extra texlive-xetex
+```
+
+Fedora:
+```bash
+sudo dnf install texlive-xetex texlive-collection-latexrecommended texlive-collection-fontsrecommended \
+    texlive-fontawesome texlive-inconsolata texlive-marvosym texlive-upquote
+```
+
+Fedora doesn't expose TeX Live's fonts to fontconfig, so XeLaTeX fails with `The font "FontAwesome" cannot be found`. Fix it by linking the font into your user font directory:
+```bash
+mkdir -p ~/.local/share/fonts
+ln -sf /usr/share/texlive/texmf-dist/fonts/opentype/public/fontawesome/FontAwesome.otf ~/.local/share/fonts/
+fc-cache -f
 ```
 
 ### 2. Set up your workbench
